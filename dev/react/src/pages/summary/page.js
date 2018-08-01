@@ -14,8 +14,6 @@ import { connect } from 'react-redux';
 
 import {getData} from "./actions";
 
-//import $ from 'jquery';
-
 
 
 class Summarypage extends Component {
@@ -34,7 +32,9 @@ class Summarypage extends Component {
         if (nextProps.location.pathname !== this.props.location.pathname) {
             //console.log('next props: '+nextProps.location.pathname);
             this.props.dispatch(getData(nextProps.match.params.id,nextProps.match.params.page));
+
             //take action here
+            window.scrollTo(0, 0);
         }
     }
 

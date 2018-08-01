@@ -1,31 +1,75 @@
+@import "./../../../scss/base/1_vars.scss";
 @import "./../../../scss/base/2_mixins.scss";
 
-.products-container {
+.player {
+  min-height: 10vh!important;
 
-  .item {
+  .row {
 
-    position: relative;
+    >div {
+      >.inner {
+        margin: 15px;
 
-    .inner {
+        &.snippet {
+          color: #fff;
 
-      height: 400px;  // normalise height for grid
+          .title {
+            color: $brand-color;
+            font-size: 17px;
+            font-family: $font-heading;
+            margin-bottom: 0.5em;
+          }
 
-      picture, img {
-        width: 100%;
-        height: auto;
+          .published {
+            color: #CACACA;
+            font-size: 13px;
+            letter-spacing: 0;
+          }
+
+          .description {
+            color: #878787;
+            font-size: 12px;
+            letter-spacing: 0;
+            line-height: 1.5em;
+            margin-top: 0.5em;
+          }
+
+          .back {
+
+            .arrow {
+              font-size: 6px;
+              margin-right: 10px;
+              display: inline-block;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 1em 2em 1em 0;
+              border-color: transparent $brand-color transparent transparent;
+              transition: border-color 0.5s ease-out;
+            }
+
+            &:hover {
+              .arrow {
+                border-color: transparent #fff transparent transparent;
+              }
+
+            }
+
+            a {
+              color: $brand-color;
+              font-size: 13px;
+              letter-spacing: 0;
+              transition:color 0.5s ease-out;
+
+              &:hover {
+                color: #fff;
+              }
+            }
+
+          }
+        }
       }
-
     }
-
-
-    &:hover {
-      .inner {
-        transform: scale(1.15);
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-    }
-
   }
   
 }

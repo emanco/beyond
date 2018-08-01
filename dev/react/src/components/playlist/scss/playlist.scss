@@ -16,7 +16,7 @@
         height: auto;
         position: relative;
 
-        @include md {
+        @include sm {
           height: 280px;  // normalise height for grid
         }
 
@@ -33,18 +33,25 @@
             height: auto;
             position: absolute;
             top: 50%;
-            transform: translateY(-50%) scale(1.35);
+            perspective: 400px;
+            perspective-origin: 50% 50%;
+            transform-origin: 50% 100%;
+            transform-style: flat;
+            transform: translateY(-50%) scale(1) perspective(400px) rotateX(0deg);
+            transition: all 0.5s ease-out;
           }
 
           .overlay {
             position: absolute;
             bottom: 0;
             width: calc(100% + 1px);  // fixes random gap appearing on the right
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0,0,0,0.6);
             height: auto;
             display: table;
             padding: 10px 15px;
             min-height: 50px;
+
+            transition: background-color 0.5s ease-out;
 
             .title {
               display: table-cell;
@@ -54,6 +61,8 @@
               color: $brand-color;
               padding-right: 1em;
               line-height: 1.5em;
+
+              //transition: color 0.5s ease-out;
             }
 
             .play-icon {
@@ -66,6 +75,20 @@
                 height: 28px;
               }
             }
+          }
+        }
+
+
+        &:hover {
+          .item-thumbnail {
+
+            >img {
+              transform: translateY(-50%) scale(1.01) perspective(400px) rotateX(-2deg);
+            }
+          }
+
+          .overlay {
+            background-color: rgba(0,0,0,0.8);
           }
         }
 

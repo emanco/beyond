@@ -61,7 +61,7 @@
       margin: 15px;
       height: auto;
       position: relative; }
-      @media (min-width: 992px) {
+      @media (min-width: 768px) {
         .main.container .row .item .inner {
           height: 280px; } }
       .main.container .row .item .inner .item-thumbnail {
@@ -76,16 +76,22 @@
           height: auto;
           position: absolute;
           top: 50%;
-          transform: translateY(-50%) scale(1.35); }
+          perspective: 400px;
+          perspective-origin: 50% 50%;
+          transform-origin: 50% 100%;
+          transform-style: flat;
+          transform: translateY(-50%) scale(1) perspective(400px) rotateX(0deg);
+          transition: all 0.5s ease-out; }
         .main.container .row .item .inner .item-thumbnail .overlay {
           position: absolute;
           bottom: 0;
           width: calc(100% + 1px);
-          background-color: rgba(0, 0, 0, 0.5);
+          background-color: rgba(0, 0, 0, 0.6);
           height: auto;
           display: table;
           padding: 10px 15px;
-          min-height: 50px; }
+          min-height: 50px;
+          transition: background-color 0.5s ease-out; }
           .main.container .row .item .inner .item-thumbnail .overlay .title {
             display: table-cell;
             vertical-align: bottom;
@@ -101,6 +107,10 @@
             .main.container .row .item .inner .item-thumbnail .overlay .play-icon img {
               width: 28px;
               height: 28px; }
+      .main.container .row .item .inner:hover .item-thumbnail > img {
+        transform: translateY(-50%) scale(1.01) perspective(400px) rotateX(-2deg); }
+      .main.container .row .item .inner:hover .overlay {
+        background-color: rgba(0, 0, 0, 0.8); }
       .main.container .row .item .inner .snippet {
         font-family: "Roboto";
         margin-top: 8px; }

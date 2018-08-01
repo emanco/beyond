@@ -1,11 +1,11 @@
-## Hugo & Cat
+## Beyond
 
-This is a test project for Hugo & Cat. 
+This is a test project for Beyond. 
 
 Candidate: Emanuele Manco <br>
 E-mail: [hello@emanuelemanco.com](mailto:hello@emanuelemanco.com)
 
-It has already been compiled and published on [hugoandcat.surge.sh](http://pricesearcher.surge.sh/)
+It has already been compiled and published on [beyond.surge.sh](http://pricesearcher.surge.sh/)
 
 If you wish to run and compile the project go in the react directory and run the following commands:
 ### `npm install`

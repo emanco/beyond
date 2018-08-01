@@ -16,6 +16,7 @@ header {
     .logo {
       display: table-cell;
       height: 4em;
+      transition: all 0.5s ease-out;
 
       @include xs {
         display: block;
@@ -24,6 +25,14 @@ header {
       @include sm {
         display: block;
       }
+
+      // add hover only for bigger screens
+      @include md {
+        &:hover {
+          transform: perspective(300px) rotateY(15deg);
+        }
+      }
+
     }
 
 

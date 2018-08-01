@@ -259,13 +259,17 @@ header {
     width: 100%; }
     header .row .logo {
       display: table-cell;
-      height: 4em; }
+      height: 4em;
+      transition: all 0.5s ease-out; }
       @media (max-width: 767px) {
         header .row .logo {
           display: block; } }
       @media (min-width: 768px) {
         header .row .logo {
           display: block; } }
+      @media (min-width: 992px) {
+        header .row .logo:hover {
+          transform: perspective(300px) rotateY(15deg); } }
     header .row .logo {
       position: relative;
       margin-top: 15px; }

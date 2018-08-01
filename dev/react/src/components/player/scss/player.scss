@@ -1,0 +1,31 @@
+@import "./../../../scss/base/2_mixins.scss";
+
+.products-container {
+
+  .item {
+
+    position: relative;
+
+    .inner {
+
+      height: 400px;  // normalise height for grid
+
+      picture, img {
+        width: 100%;
+        height: auto;
+      }
+
+    }
+
+
+    &:hover {
+      .inner {
+        transform: scale(1.15);
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+    }
+
+  }
+  
+}

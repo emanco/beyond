@@ -1,0 +1,55 @@
+@import "./../../../scss/base/1_vars.scss";
+
+nav {
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px;
+
+  .prev, .next {
+    display: inline-block;
+    color: $brand-color;
+    font-size: 15px;
+    font-family: $font-heading;
+    padding: 10px 20px;
+    opacity: 0.7;
+    transition: opacity 0.5s ease-out;
+    vertical-align: middle;
+
+    svg {
+      fill: $brand-color;
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+      transform: translateY(10px);
+      transition: all 0.5s ease-out;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .next {
+
+    &:hover {
+      svg {
+        transform: translateY(10px) translateX(5px);
+      }
+    }
+  }
+
+  .prev {
+
+    &:hover {
+      svg {
+        transform: translateY(10px) translateX(-5px);
+      }
+    }
+  }
+
+}
+

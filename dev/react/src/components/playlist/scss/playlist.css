@@ -1,0 +1,115 @@
+/*
+  Usage:
+  @include placeholder {
+    font-style: italic;
+    color: black;
+  }
+*/
+/*
+  Returns a media queries which scales the units relative to the xs and lg values
+  Remember, dont be lazy when using this. If you've got other things that need be
+  in media queries for the same element, dont use this.
+
+  Usage: @include scale-pixels('margin-top', 25px, 125px);
+
+  Returns:
+
+  padding:25px
+
+  @media (min-width:768px){
+    padding:50px;
+  }
+
+  @media (min-width:992px){
+    padding:80px;
+  }
+
+  @media (min-width:1200px){
+    padding:115px;
+  }
+
+  @media (min-width:1500px){
+    padding:125px;
+  }
+*/
+/*
+  Pass in a colour and it gives you a button, BOOM.
+*/
+/*
+  Pass in 2 colours and it gives you a button width a gradient, BOOM.
+*/
+/*
+  Bootstrap size mixins
+*/
+/*
+ Viewport sized typography with minimum and maximum values
+
+ @param {Number}   $min         - Minimum font size (px)
+ @param {Number}   $max         - Maximum font size (px)
+
+  Example scss - 2.79vw font size (with 53px fallback),
+  @include responsive-font(20px, 53px);
+*/
+/*
+  Icon Container sizing
+*/
+.main.container .row {
+  margin: -15px; }
+  .main.container .row .item {
+    position: relative; }
+    .main.container .row .item .inner {
+      margin: 15px;
+      height: auto;
+      position: relative; }
+      @media (min-width: 992px) {
+        .main.container .row .item .inner {
+          height: 280px; } }
+      .main.container .row .item .inner .item-thumbnail {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        height: 1px;
+        padding-top: 55%; }
+        .main.container .row .item .inner .item-thumbnail > img {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%) scale(1.35); }
+        .main.container .row .item .inner .item-thumbnail .overlay {
+          position: absolute;
+          bottom: 0;
+          width: calc(100% + 1px);
+          background-color: rgba(0, 0, 0, 0.5);
+          height: auto;
+          display: table;
+          padding: 10px 15px;
+          min-height: 50px; }
+          .main.container .row .item .inner .item-thumbnail .overlay .title {
+            display: table-cell;
+            vertical-align: bottom;
+            font-family: "Alfa Slab One";
+            font-size: 16px;
+            color: #50E3C2;
+            padding-right: 1em;
+            line-height: 1.5em; }
+          .main.container .row .item .inner .item-thumbnail .overlay .play-icon {
+            display: table-cell;
+            vertical-align: middle;
+            width: 28px; }
+            .main.container .row .item .inner .item-thumbnail .overlay .play-icon img {
+              width: 28px;
+              height: 28px; }
+      .main.container .row .item .inner .snippet {
+        font-family: "Roboto";
+        margin-top: 8px; }
+        .main.container .row .item .inner .snippet .published {
+          color: #CACACA;
+          font-size: 13px;
+          letter-spacing: 0; }
+        .main.container .row .item .inner .snippet .description {
+          color: #878787;
+          font-size: 12px;
+          letter-spacing: 0;
+          line-height: 1.5em; }

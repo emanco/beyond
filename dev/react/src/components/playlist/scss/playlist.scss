@@ -1,0 +1,106 @@
+@import "./../../../scss/base/1_vars.scss";
+@import "./../../../scss/base/2_mixins.scss";
+
+
+.main.container {
+
+  .row {
+    margin: -15px;
+
+    .item {
+      position: relative;
+
+
+      .inner {
+        margin: 15px;
+        height: auto;
+        position: relative;
+
+        @include md {
+          height: 280px;  // normalise height for grid
+        }
+
+        .item-thumbnail {
+          width: 100%;
+          display: inline-block;
+          position: relative;
+          overflow: hidden;
+          height: 1px;
+          padding-top: 55%; // ratio of thumbnail container
+
+          >img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) scale(1.35);
+          }
+
+          .overlay {
+            position: absolute;
+            bottom: 0;
+            width: calc(100% + 1px);  // fixes random gap appearing on the right
+            background-color: rgba(0,0,0,0.5);
+            height: auto;
+            display: table;
+            padding: 10px 15px;
+            min-height: 50px;
+
+            .title {
+              display: table-cell;
+              vertical-align: bottom;
+              font-family: $font-heading;
+              font-size: 16px;
+              color: $brand-color;
+              padding-right: 1em;
+              line-height: 1.5em;
+            }
+
+            .play-icon {
+              display: table-cell;
+              vertical-align: middle;
+              width: 28px;
+
+              img {
+                width: 28px;
+                height: 28px;
+              }
+            }
+          }
+        }
+
+        .snippet {
+            font-family: $font-body;
+            margin-top: 8px;
+
+            .published {
+              color: #CACACA;
+              font-size: 13px;
+              letter-spacing: 0;
+            }
+
+            .description {
+              color: #878787;
+              font-size: 12px;
+              letter-spacing: 0;
+              line-height: 1.5em;
+            }
+        }
+
+
+      }
+
+
+      &:hover {
+        .inner {
+          //transform: scale(1.15);
+          //box-shadow: 0 0 10px rgba(0,0,0,0.2);
+          //z-index: 1;
+        }
+      }
+
+    }
+
+  }
+
+}

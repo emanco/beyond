@@ -1,0 +1,30 @@
+nav {
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px; }
+  nav .prev, nav .next {
+    display: inline-block;
+    color: #50E3C2;
+    font-size: 15px;
+    font-family: "Alfa Slab One";
+    padding: 10px 20px;
+    opacity: 0.7;
+    transition: opacity 0.5s ease-out;
+    vertical-align: middle; }
+    nav .prev svg, nav .next svg {
+      fill: #50E3C2;
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+      transform: translateY(10px);
+      transition: all 0.5s ease-out; }
+    nav .prev:hover, nav .next:hover {
+      opacity: 1; }
+  nav .next:hover svg {
+    transform: translateY(10px) translateX(5px); }
+  nav .prev:hover svg {
+    transform: translateY(10px) translateX(-5px); }

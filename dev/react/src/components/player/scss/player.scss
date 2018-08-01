@@ -18,6 +18,8 @@
             font-size: 17px;
             font-family: $font-heading;
             margin-bottom: 0.5em;
+
+            -moz-osx-font-smoothing: grayscale; // fixes rendering in firefox
           }
 
           .published {

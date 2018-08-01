@@ -33,7 +33,7 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "yarn run build && surge -p build -d hugoandcat.surge.sh"
+    "deploy": "yarn run build && surge -p build -d beyond.surge.sh"
   },
   "devDependencies": {
     "browserify-css": "^0.14.0"

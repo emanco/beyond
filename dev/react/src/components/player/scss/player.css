@@ -63,7 +63,8 @@
         color: #50E3C2;
         font-size: 17px;
         font-family: "Alfa Slab One";
-        margin-bottom: 0.5em; }
+        margin-bottom: 0.5em;
+        -moz-osx-font-smoothing: grayscale; }
       .player .row > div > .inner.snippet .published {
         color: #CACACA;
         font-size: 13px;

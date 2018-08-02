@@ -1,3 +1,5 @@
+import 'babel-polyfill';  // adds supports for IE11
+
 // libraries
 import React from 'react';
 import ReactDOM from 'react-dom';

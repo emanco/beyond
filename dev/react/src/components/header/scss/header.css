@@ -273,5 +273,12 @@ header {
     header .row .logo {
       position: relative;
       margin-top: 15px; }
-      header .row .logo img {
-        width: 250px; }
+      @media (max-width: 767px) {
+        header .row .logo img {
+          width: 200px; } }
+      @media (min-width: 768px) {
+        header .row .logo img {
+          width: 250px; } }
+      @media (min-width: 992px) {
+        header .row .logo img {
+          width: 250px; } }

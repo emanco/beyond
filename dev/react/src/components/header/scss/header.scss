@@ -41,7 +41,19 @@ header {
       margin-top: 15px;
 
       img {
-        width: 250px;
+
+        @include xs {
+          width: 200px;
+        }
+
+        @include sm {
+          width: 250px;
+        }
+
+        @include md {
+          width: 250px;
+        }
+
       }
     }
 
